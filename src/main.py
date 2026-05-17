@@ -1,23 +1,23 @@
 from tuilb import fancy_input, prt, print_with_color
 import subprocess
 import time
-from rq2b_xm_maker import xm_groups_to_json, CheckSecondGroupHasHttpsValidDownloads
 import functions
 import os
 import adbcheck
 import sys
 from Third_Party_Libs.tqdm import tqdm
-ascii_greet = r"""                           /$$                     /$$       /$$             /$$           /$$       /$$                       /$$                        
-                          | $$                    |__/      | $$            | $$          | $$      | $$                      | $$                        
-  /$$$$$$  /$$$$$$$   /$$$$$$$  /$$$$$$   /$$$$$$  /$$  /$$$$$$$        /$$$$$$$  /$$$$$$ | $$$$$$$ | $$  /$$$$$$   /$$$$$$  /$$$$$$    /$$$$$$   /$$$$$$ 
- |____  $$| $$__  $$ /$$__  $$ /$$__  $$ /$$__  $$| $$ /$$__  $$       /$$__  $$ /$$__  $$| $$__  $$| $$ /$$__  $$ |____  $$|_  $$_/   /$$__  $$ /$$__  $$
-  /$$$$$$$| $$  \ $$| $$  | $$| $$  \__/| $$  \ $$| $$| $$  | $$      | $$  | $$| $$$$$$$$| $$  \ $$| $$| $$  \ $$  /$$$$$$$  | $$    | $$$$$$$$| $$  \__/
- /$$__  $$| $$  | $$| $$  | $$| $$      | $$  | $$| $$| $$  | $$      | $$  | $$| $$_____/| $$  | $$| $$| $$  | $$ /$$__  $$  | $$ /$$| $$_____/| $$      
-|  $$$$$$$| $$  | $$|  $$$$$$$| $$      |  $$$$$$/| $$|  $$$$$$$      |  $$$$$$$|  $$$$$$$| $$$$$$$/| $$|  $$$$$$/|  $$$$$$$  |  $$$$/|  $$$$$$$| $$      
- \_______/|__/  |__/ \_______/|__/       \______/ |__/ \_______/       \_______/ \_______/|_______/ |__/ \______/  \_______/   \___/   \_______/|__/      
-                                                                                                                                                          
-                                                                                                                                                          
-                                                                                                                                                          """
+ascii_greet = r""" $$$$$$\  $$\      $$\ $$\   $$\ $$$$$$\ 
+$$  __$$\ $$$\    $$$ |$$$\  $$ |\_$$  _|
+$$ /  $$ |$$$$\  $$$$ |$$$$\ $$ |  $$ |  
+$$ |  $$ |$$\$$\$$ $$ |$$ $$\$$ |  $$ |  
+$$ |  $$ |$$ \$$$  $$ |$$ \$$$$ |  $$ |  
+$$ |  $$ |$$ |\$  /$$ |$$ |\$$$ |  $$ |  
+ $$$$$$  |$$ | \_/ $$ |$$ | \$$ |$$$$$$\ 
+ \______/ \__|     \__|\__|  \__|\______|
+                                         
+                                         
+                                         """ 
+
 
 
 def advanced_mode():
@@ -30,7 +30,7 @@ def advanced_mode():
         time.sleep(0.1)
         Test = fancy_input("Shell",color="red",bold=True)
         if Test == "EXIT".lower():
-            break
+            exit()
         elif Test == "MAKECFG".lower():
             functions.makecfg()
             prt(text="Made Config File!",color="blue",bold=True)
@@ -72,8 +72,8 @@ def Details():
 def main():
     subprocess.run("clear",shell=True)
     global ascii_greet
-    prt(text=ascii_greet,color="blue",bold=True)
-    prt(text="Welcome To Thvretts Universal Android Debloater!!!!",color="purple",bold=True)
+    prt(text=ascii_greet,color="white",bold=True)
+    prt(text="Welcome To Omni Android Debloater!!!!",color="purple",bold=True)
     mode = fancy_input("Would you like to enter advanced mode? (Y/N)",color="blue",bold=True)
     if mode == "Y".lower():
         advanced_mode()
@@ -111,6 +111,7 @@ def main():
         return
     adbcheck.RemovePackageADB(xm_path)
     prt("All Done You May Enjoy Your Debloated Phone!",color="green",bold=True)
+    exit()
 
 
 main()
