@@ -80,7 +80,9 @@ The result is a stock ROM that behaves like a clean AOSP build, respects your pr
 *   Android Device with **USB Debugging** enabled.
 *   A USB cable to connect your phone to your PC.
 
-### Installation
+### Building From Scratch
+
 1. Clone the repository:
-   ```bash
-   git clone [https://github.com/yourusername/Omni_Debloat.git](https://github.com/yourusername/Omni_Debloat.git)
+   
+   ```git clone https://github.com/Thvrett77/Omni_Debloat```
+
