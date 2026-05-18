@@ -30,7 +30,7 @@ def advanced_mode():
         time.sleep(0.1)
         Test = fancy_input("Shell",color="red",bold=True)
         if Test == "EXIT".lower():
-            exit()
+            sys.exit()
         elif Test == "MAKECFG".lower():
             functions.makecfg()
             prt(text="Made Config File!",color="blue",bold=True)
@@ -69,49 +69,81 @@ def Details():
 
 
 
+
+
 def main():
-    subprocess.run("clear",shell=True)
-    global ascii_greet
-    prt(text=ascii_greet,color="white",bold=True)
-    prt(text="Welcome To Omni Android Debloater!!!!",color="purple",bold=True)
-    mode = fancy_input("Would you like to enter advanced mode? (Y/N)",color="blue",bold=True)
-    if mode == "Y".lower():
-        advanced_mode()
-    time.sleep(0.4)
-    subprocess.run("clear",shell=True)
-    prt("Checking if your device is connected [!]",color="yellow",bold=True)
-    start_time = time.time()
-    timeout = 15
-    while True:
-        elapsed_time = time.time() - start_time
-        if elapsed_time > timeout:
-            prt("Reached Timeout Stopping [X]",color="yellow",bold=False)
-            time.sleep(4)
-            subprocess.run("clear",shell=True)
-            return
-        if adbcheck.ConnectADB() == True:
-            prt("Device Connected [+]",color="green",bold=True)
-            time.sleep(0.5)
-            subprocess.run("clear",shell=True)
-            break
+    try:
+        subprocess.run("clear",shell=True)
+        global ascii_greet
+        prt(text=ascii_greet,color="white",bold=True)
+        prt(text="Welcome To Omni Android Debloater!!!!",color="purple",bold=True)
+        mode = fancy_input("Would you like to enter advanced mode? (Y/N)",color="blue",bold=True)
+        if mode == "Y".lower():
+            advanced_mode()
+        elif mode == "N".lower():
+            pass
         else:
-            prt("Device Failed To Connect [-]",color="red",bold=True)
-            time.sleep(0.2)
+            sys.exit(0)
+        time.sleep(0.4)
+        subprocess.run("clear",shell=True)
+        prt("Checking if your device is connected [!]",color="yellow",bold=True)
+        start_time = time.time()
+        timeout = 15
+        while True:
+            try:
+                elapsed_time = time.time() - start_time
+                if elapsed_time > timeout:
+                    prt("Reached Timeout Stopping [X]",color="yellow",bold=False)
+                    time.sleep(4)
+                    subprocess.run("clear",shell=True)
+                    return
+                if adbcheck.ConnectADB() == True:
+                    prt("Device Connected [+]",color="green",bold=True)
+                    time.sleep(0.5)
+                    subprocess.run("clear",shell=True)
+                    break
+                else:
+                    prt("Device Failed To Connect [-]",color="red",bold=True)
+                    time.sleep(0.2)
+            except KeyboardInterrupt:
+                 prt("Program Terminated Forcefully",color="white",bold=True)
+                 sys.exit(0)
+
+
+
+
+        xm_path = Details()
+
+        prt("Removing Packages That The Preset Specified [+]",color="green",bold=True)
+    
+        areyousure = fancy_input("Are You Sure You Want To Continue? (Y/N)",color="aqua",bold=True)
+        if areyousure == "N".lower():
+            return
+        adbcheck.RemovePackageADB(xm_path)
+        sys.exit(0)
+
+
+    except KeyboardInterrupt:
+        raise
+
     
     
+# These are commented because they were causing a bug so i moved them into the try and except block to fix its
             
         
 
-    xm_path = Details()
+#    xm_path = Details()
 
-    prt("Removing Packages That The Preset Specified [+]",color="green",bold=True)
+#    prt("Removing Packages That The Preset Specified [+]",color="green",bold=True)
     
-    areyousure = fancy_input("Are You Sure You Want To Continue? (Y/N)",color="aqua",bold=True)
-    if areyousure == "N".lower():
-        return
-    adbcheck.RemovePackageADB(xm_path)
-    prt("All Done You May Enjoy Your Debloated Phone!",color="green",bold=True)
-    exit()
+#    areyousure = fancy_input("Are You Sure You Want To Continue? (Y/N)",color="aqua",bold=True)
+#    if areyousure == "N".lower():
+#        return
+#    adbcheck.RemovePackageADB(xm_path)
+ #   sys.exit(0)
 
-
-main()
+try:
+    main()
+except KeyboardInterrupt:
+    prt("Program Terminated Forcefully",color="white",bold=True)
+    sys.exit()
