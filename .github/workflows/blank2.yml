@@ -27,8 +27,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Grant Permission
-        run: chmod +x MacOSversion/main
+        run: chmod +x main
 
       # Runs a set of commands using the runners shell
       - name: Run The File
-        run: MacOSversion/main
+        run: main
