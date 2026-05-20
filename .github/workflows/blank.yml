@@ -39,10 +39,6 @@ jobs:
       - name: Bundle into a Mac os executable
         run: pyinstaller --noconfirm --onefile --console --optimize "2" --exclude-module "pydoc" --exclude-module "tkinter" --exclude-module "json" --exclude-module "xml" --exclude-module "html" --exclude-module "_tkinter" --exclude-module "Tkinter" --exclude-module "turtle" --exclude-module "curses" --exclude-module "unittest" --exclude-module "lib2to3" --exclude-module "idlelib" --exclude-module "pydoc_data" --exclude-module "smtplib" --exclude-module "ftplib" --exclude-module "hashlib" --exclude-module "hmac" --exclude-module "secrets" --exclude-module "ssl" --exclude-module "sqlite3" --exclude-module "csv" --exclude-module "tarfile" --exclude-module "zoneinfo" --exclude-module "gettext" --exclude-module "asyncio" --exclude-module "concurrent" --exclude-module "ctypes" "src/main.py"
 
-      - name: Run the app
-        run: MacOSversion/main
-
-
 
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v4
