@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Mac Os version
 
 # Controls when the workflow will run
 on:
@@ -18,19 +18,45 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      # Sets up the Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      # Install PyInstaller and any other necessary build dependencies
+      - name: Install dependencies
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          python -m pip install --upgrade pip
+          pip install pyinstaller
+
+      # Build the application using PyInstaller with your specific optimization flags
+      - name: Build executable with PyInstaller
+        run: |
+          pyinstaller --noconfirm --onefile --console --optimize "2" \
+            --exclude-module "pydoc" --exclude-module "tkinter" --exclude-module "json" \
+            --exclude-module "xml" --exclude-module "html" --exclude-module "_tkinter" \
+            --exclude-module "Tkinter" --exclude-module "turtle" --exclude-module "curses" \
+            --exclude-module "unittest" --exclude-module "lib2to3" --exclude-module "idlelib" \
+            --exclude-module "pydoc_data" --exclude-module "smtplib" --exclude-module "ftplib" \
+            --exclude-module "hashlib" --exclude-module "hmac" --exclude-module "secrets" \
+            --exclude-module "ssl" --exclude-module "sqlite3" --exclude-module "csv" \
+            --exclude-module "tarfile" --exclude-module "zoneinfo" --exclude-module "gettext" \
+            --exclude-module "asyncio" --exclude-module "concurrent" --exclude-module "ctypes" \
+            --exclude-module "math" \
+            "src/main.py"
+
+      # Optional: Upload the compiled binary so you can download it from the GitHub Actions run page
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos-executable
+          path: dist/main
