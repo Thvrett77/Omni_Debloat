@@ -59,7 +59,7 @@ We are constantly working to make Omni_Debloat better. Here is what is planned f
 | 🔹 Rommify Mode (check below) | 🔸 Fixing Bugs | 🔹 Core ADB integration |
 | 🔹 Fixing Advanced Mode | 🔸 Cleaning Code | 🔹 Official Presets engine |
 | 🔹 App Alternatives Installer | 🔸 Experimental Alternatives Installer | 🔹 Basic CLI Framework |
-| 🔹 Lua Extension Support | | 🔹 Discord Server Launch |
+| 🔹 Lua Extension Support | 🔸 GUI | 🔹 Discord Server Launch |
 
 
 ### Rommify Mode
