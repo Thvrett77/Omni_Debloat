@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-sharp)](http://makeapullrequest.com)
 [![Status](https://img.shields.io/badge/Status-In--Development-orange)](https://github.com/)
-[![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.gg/AxAvFCyVvK)
+[![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.gg/Ab9gaqXZTn)
 
 **Omni Debloat** is a powerful, streamlined tool designed to help you strip away unwanted bloatware from your smartphone, reclaiming your privacy, storage, and battery life. 
 
