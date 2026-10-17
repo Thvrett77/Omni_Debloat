@@ -7,6 +7,8 @@
 
 **Omni Debloat** is a powerful, streamlined tool designed to help you strip away unwanted bloatware from your smartphone, reclaiming your privacy, storage, and battery life. 
 
+![Omni Debloat](assets/Omni-Debloat.png)
+
 ---
 
 ## 🚀 Features
