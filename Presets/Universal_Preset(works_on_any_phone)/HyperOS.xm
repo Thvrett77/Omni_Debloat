@@ -1,3 +1,11 @@
+#====OMNIDEBLOAT PRESET====#
+#     Works On Any Phone   #
+#  Maintainer: Thvrett77   #
+#     Status: Official     #
+#==========================#
+
+# This List Will Keep Growing
+
 com.mi.global.bbs
 com.mi.global.shop
 com.miui.android.fashiongallery
