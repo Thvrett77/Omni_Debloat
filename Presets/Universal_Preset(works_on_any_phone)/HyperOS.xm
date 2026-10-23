@@ -72,3 +72,4 @@ com.mi.global.pocobbs
 com.mi.globalminusscreen
 com.google.android.calendar
 com.xiaomi.glgm
+com.xiaomi.midrop
