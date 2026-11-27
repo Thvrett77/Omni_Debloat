@@ -1,0 +1,9 @@
+Package: omni-debloat
+Version: 1.8.0
+Section: utils
+Priority: optional
+Architecture: all
+Depends: python3, python3-pyqt6, adb
+Maintainer: Thanasis
+Description: Omni Debloat Android debloating tool
+ Omni Debloat is an app that is designed to debloat your android smartphone using a simple ui thats going to guide you to it

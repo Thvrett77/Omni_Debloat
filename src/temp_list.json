@@ -1,0 +1,18 @@
+{
+  "klee": {
+    "link": "https://raw.githubusercontent.com/Thvrett77/Omni_Debloat/refs/heads/main/Presets/Poco-X8-pro/POCOX8PRO.xm"
+  },
+  "onyx": {
+    "link": "https://raw.githubusercontent.com/Thvrett77/Omni_Debloat/refs/heads/main/Presets/Poco-F7/OSx3.0.30x.0.WOLMIXM.xm",
+    "China_ROM_link": "https://raw.githubusercontent.com/Thvrett77/Omni_Debloat/refs/heads/main/Presets/Poco-F7/OS3.0.30x.0.WOLCNXM.xm"
+  },
+  "peridot": {
+    "link": "https://raw.githubusercontent.com/Thvrett77/Omni_Debloat/refs/heads/main/Presets/Poco-F6/OS3.0.302.0.WNPMIXM.xm"
+  },
+  "tanzanite": {
+    "link": "https://raw.githubusercontent.com/Thvrett77/Omni_Debloat/refs/heads/main/Presets/Redmi-Note-14-4G/3.0.302.0.WOGEUXM.xm"
+  },
+  "universal": {
+    "link": "https://raw.githubusercontent.com/Thvrett77/Omni_Debloat/refs/heads/main/Presets/Universal_Preset(works_on_any_phone)/HyperOS.xm"
+  }
+}

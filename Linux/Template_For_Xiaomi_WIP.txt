@@ -1,0 +1,9 @@
+com.miui.analytics  # Tracking From Xiaomi
+com.miui.msa.global # Ads In Hyper OS
+com.miui.daemon # Tracking From Xiaomi
+com.miui.misightservice
+com.google.android.adservices.api #Ads && Telemetry
+com.android.traceur # Android Telemetry
+com.facebook.services (Facebook tracking, Not the facebook app)
+com.xiaomi.mipicks # Mi Picks App Store (not The Google play store its a rippoff of the play store)
+com.mi.appfinder (Another app that collects data that is absolutely useless)
