@@ -85,3 +85,4 @@ com.mi.globalminusscreen
 com.google.android.calendar
 com.xiaomi.glgm
 com.miui.fast
+com.miui.fm
