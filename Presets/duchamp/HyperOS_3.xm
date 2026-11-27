@@ -15,3 +15,5 @@ com.miui.wallpaper.overlay.customize
 com.miui.yellowpage
 
 # FOR TESTING PURPOSES ONLY
+
+test
