@@ -14,5 +14,14 @@
   },
   "universal": {
     "link": "https://raw.githubusercontent.com/Thvrett77/Omni_Debloat/refs/heads/main/Presets/Universal_Preset(works_on_any_phone)/HyperOS.xm"
+  },
+  "rodin": {
+    "link": "https://raw.githubusercontent.com/Thvrett77/Omni_Debloat/refs/heads/main/Presets/rodin/HyperOS_3.xm"
+  },
+  "garnet": {
+    "link": "https://raw.githubusercontent.com/Thvrett77/Omni_Debloat/refs/heads/main/Presets/garnet/HyperOS_3.xm"
+  },
+  "duchamp": {
+    "link": "https://raw.githubusercontent.com/Thvrett77/Omni_Debloat/refs/heads/main/Presets/duchamp/HyperOS_3.xm"
   }
 }

@@ -2,7 +2,9 @@
 # Last Updated: 2026-02-10 (yyyy-mm-dd)
 # Changed: Replaced the tqdm loading bar with the GUI approach one found in experimental_GUI.py
 
-
+# To Be implemented
+# This needs to be done because some apps when tried to be removed result in an error (Failure [-1000])
+# adb shell pm disable-user --user 0 
 
 
 

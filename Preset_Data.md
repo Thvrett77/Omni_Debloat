@@ -26,4 +26,4 @@
 ## Recommended
 
 
-
+com.xiaomi.midrop  --- Standard command doesnt remove it it results in an error, please utilize the disable function when writing your presets
